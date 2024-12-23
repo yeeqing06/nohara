@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Nohara's House</title>
+      <link rel="icon" href="images/icon.png" type="image/x-icon">
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <audio controls autoplay loop>
+         <source src="audio/shinchan_theme_song.mp3" type="audio/mp3">
+      </audio>
+      <header>
+         <a href="index.html" class="nohara"><img src="images/logo.png" alt="Logo" class="logo" ></a>
+         <nav>
+            <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="outlets.html">Outlets</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+         <div class="slideshow-container">
+            <div class="mySlides fade">
+               <div class="numbertext"></div>
+               <a href="index.html"><img src="images/voucher/welcome.jpg" alt="Welcome page" style="width:100%"></a>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext"></div>
+               <a href="blindbox.html"><img src="images/voucher/voucher1.jpg" alt="Blindbox voucher" style="width:100%"></a>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext"></div>
+               <a href="discount.html"><img src="images/voucher/voucher2.png" alt="Image of discount" style="width:100%"></a>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext"></div>
+               <a href="birthday.html"><img src="images/voucher/voucher3.jpg" alt="Birthday voucher" style="width:100%"></a>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext"></div>
+               <a href="signup.html"><img src="images/voucher/membership.jpg" alt="Membership" style="width:100%"></a>
+            </div>
+           <a class="prev" onclick="plusSlides(-1)">❮</a>
+           <a class="next" onclick="plusSlides(1)">❯</a>
+         </div>
+         <br>
+         <div style="text-align:center">
+           <span class="dot" onclick="currentSlide(1)"></span> 
+           <span class="dot" onclick="currentSlide(2)"></span> 
+           <span class="dot" onclick="currentSlide(3)"></span>
+           <span class="dot" onclick="currentSlide(4)"></span>
+           <span class="dot" onclick="currentSlide(5)"></span> 
+         </div>
+         <script>
+           let slideIndex = 0;
+           showSlides(); // Start the automatic slideshow
+   
+           // Function to automatically change slides
+           function showSlides() {
+               let i;
+               let slides = document.getElementsByClassName("mySlides");
+               let dots = document.getElementsByClassName("dot");
+               for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+               }
+               slideIndex++;
+               if (slideIndex > slides.length) {slideIndex = 1}    
+               for (i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace(" active", "");
+               }
+               slides[slideIndex-1].style.display = "block";  
+               dots[slideIndex-1].className += " active";
+               setTimeout(showSlides, 5000); // Change slide every 3 seconds
+           }
+   
+           // Function for manual navigation
+           function plusSlides(n) {
+               slideIndex += n;
+               showManualSlides(slideIndex);
+           }
+   
+           function currentSlide(n) {
+               slideIndex = n;
+               showManualSlides(slideIndex);
+           }
+   
+           // Helper function for manual slide navigation
+           function showManualSlides(n) {
+               let i;
+               let slides = document.getElementsByClassName("mySlides");
+               let dots = document.getElementsByClassName("dot");
+               if (n > slides.length) {slideIndex = 1}    
+               if (n < 1) {slideIndex = slides.length}
+               for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+               }
+               for (i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace(" active", "");
+               }
+               slides[slideIndex-1].style.display = "block";  
+               dots[slideIndex-1].className += " active";
+           }
+       </script>
+         <div id="style">
+         <br>
+            <div class="parent">
+               <h2>Taste the Fun in Shin Chan's World!</h2>
+            </div>
+         </div>
+         <br>
+         <div class="image-container">
+            <a href="menu.html#M1">
+                <img class="overlay-image1" src="images/ramen.jpg" alt="Ramen">
+            </a>
+            <p class="image-text1">Authentic Japanese Meals</p>
+
+            <a href="menu.html#M4">
+                <img class="overlay-image2" src="images/fries.webp" alt="Fries">
+            </a>
+            <p class="image-text2">Fun Sides</p>
+
+            <a href="menu.html#M2">
+                <img class="overlay-image3" src="images/latte.jpg" alt="Latte">
+            </a>
+            <p class="image-text3">Exquisite Latte Art</p>
+
+            <a href="outlets.html">
+                <img class="overlay-image4" src="images/shinchan.jpg" alt="ShinChan">
+            </a>
+            <p class="image-text4">Shin-chan in Every Corner</p>
+
+            <a href="signup.html">
+               <img class="overlay-image5" src="images/signin.webp" alt="Sign in">
+            </a>
+            <p class="image-text5">Sign Up Now</p>
+         </div>
+         
+         <div class="meals">
+         </div>
+      </main>
+      <footer class="foot">
+         <nav>
+            <div class="navicon">
+               <ul>
+                  <li><div class="zoom"><a href="https://web.whatsapp.com/"><img src="images/icon/whatsapp.png" alt="Whatsapp" style="width:28px; height:27px;"></a></div></li>
+                  <li><div class="zoom"><a href="https://mail.google.com/mail/"><img src="images/icon/gmail.png" alt="Gmail" style="width:28px; height:28px;"></a></div></li> 
+                  <li><div class="zoom"><a href="https://www.instagram.com/accounts/login/"><img src="images/icon/instagram.png" alt="Instagram" style="width:30px; height:28px;"></a></div></li> 
+                  <li><div class="zoom"><a href="https://www.facebook.com/"><img src="images/icon/facebook.png" alt="Facebook" style="width:28px; height:26px;"></a></div></li>
+              </ul>
+            </div>
+            <p class="copyright">&copy; 2024, Nohara's House</p>
+         </nav>
+      </footer>
+   </body>
+</html>

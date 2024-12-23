@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box
+}
+
+.mySlides {
+    display: none
+}
+
+
+body {
+    background-color: bisque;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    font-family: Verdana, sans-serif;
+}
+
+#style{
+    font-size: 2.5em;
+    padding-bottom: 0%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 65px;
+    background-color: #ecbd9f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .nohara {
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nohara img {
+    width: 260px;
+    height: 190px;
+}
+
+.logo {
+    width: 170px; 
+    height: 200px;
+    margin: 0; 
+    padding: 0; 
+    display: block; 
+    object-fit: contain; 
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+header nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+  
+header nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #927854;
+    border-radius: 20px;
+    transition: 0.3s ease, color 0.3s ease; 
+}
+  
+header nav ul li a:hover,
+header nav ul li a.active {
+    background: #927854;
+    color: #ecbd9f;
+}
+
+.active {
+    color: #fff; 
+    background-color: #5a4d47; 
+}
+
+.foot {
+    background-color: #ecbd9f;
+    width: 100%;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.navicon {
+    padding-top: 10px;
+    padding-bottom: 16px;
+    padding-left: 595px;
+    display: flex;
+    width: 100%;
+}
+
+.zoom {
+	display: inline-block;
+	padding: 28px;
+	transition: transform .2s;
+	width: 2px;
+	height: 2px;
+	margin: 0 auto;
+}
+  
+ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+}
+
+.zoom:hover {
+    transform: scale(0.5);
+	transform: scale(1.2); 
+}
+
+.image-container {
+    width: 100%; 
+    background-image: url('images/cafelook.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-image1 {
+    position: absolute;
+    top: 1080px; 
+    left: 75px; 
+    width: 300px; 
+    height: 300px;
+    border: 15px double #f0ede8;
+    border-radius: 500px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-text1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 26%;
+    margin-left: 25px;
+    font-size: 35px; 
+    font-weight: bold; 
+    color: bisque; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.overlay-image2 {
+    position: absolute;
+    top: 1080px; 
+    left: 620px; 
+    width: 300px; 
+    height: 300px;
+    border: 15px double #f0ede8;
+    border-radius: 50%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.image-text2 {
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 0%;
+    padding-left: 34px;
+    margin-top: -75px; 
+    font-size: 35px; 
+    font-weight: bold; 
+    color: bisque; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+
+.overlay-image3 {
+    position: absolute;
+    top: 1080px; 
+    right: 130px; 
+    width: 300px; 
+    height: 300px;
+    border: 15px double #f0ede8;
+    border-radius: 50%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.image-text3 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 0%;
+    margin-top: -75px; 
+    margin-left: 1090px;
+    font-size: 35px; 
+    font-weight: bold; 
+    color: bisque; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.overlay-image4 {
+    position: absolute;
+    top: 1500px; 
+    left: 340px; 
+    width: 300px; 
+    height: 300px;
+    border: 15px double #f0ede8;
+    border-radius: 50%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.image-text4 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 21%;
+    padding-bottom: 2%;
+    margin-top: 58px; 
+    margin-left: 280px;
+    font-size: 35px; 
+    font-weight: bold; 
+    color: bisque; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.overlay-image5 {
+    position: absolute;
+    top: 1500px; 
+    left: 850px; 
+    width: 300px;
+    height: 300px;
+    border: 15px double #f0ede8;
+    border-radius: 50%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.image-text5 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 2%;
+    margin-top: -105px; 
+    margin-left: 900px;
+    font-size: 35px; 
+    font-weight: bold; 
+    color: bisque; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.copyright {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 400%;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 140px; 
+}
+
+.slideshow-container-blindbox {
+    max-width: 50%;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 150px; 
+    padding-bottom: 20px;
+    padding-left: 300px;
+}
+
+.slideshow-container-blindbox img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    display: block; 
+    margin: 0;
+    padding: 0;
+    border: none;
+    border: 3px solid #98704f; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+    transition: transform 0.5s ease; 
+}
+
+.slideshow-container-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.promo-text {
+    padding-top: 130px;    
+    padding-left: 40px;   
+    padding-right: 90px;  
+    width: 60%; 
+}
+
+.promo-text h2 {
+    font-family:'Courier New', Courier, monospace; 
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.promo-text p {
+    color: #717171;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    object-fit: cover; 
+}
+  
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5); 
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+}
+
+.chat {
+    background-color: bisque;
+    border-radius: 5px;
+    padding-top: 100px;
+    margin: 10px 0;
+}
+
+.details{
+    margin-top: -20px;
+}
+
+.detail h2 {
+    text-align: center;
+}
+
+.chat img {
+    display: block; 
+    margin: 0 auto; 
+    height: 160px;
+    width: 170px;
+}
+
+.chat p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.birthday-section {
+    background-color: #ffe4c4; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.birthday {
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.birthday p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}

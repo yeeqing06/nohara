@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nohara's House</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="nohara"><img src="images/logo.png" alt="Logo" class="logo" ></a>
+      <nav>
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="menu.html" >Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="outlets.html">Outlets</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br><br><br>
+    <main> 
+      <div class="slideshow-container-wrapper">
+        <div class="slideshow-container-blindbox">
+          <div class="mySlides fade">
+            <img src="images/blindbox/blindbox1.jpeg" alt="Slide1" style="width:60%">
+          </div>
+          <div class="mySlides fade">
+            <img src="images/blindbox/blindbox2.jpeg" alt="Slide2" style="width:60%">
+          </div>
+          <div class="mySlides fade">
+            <img src="images/blindbox/blindbox3.jpeg" alt="Slide3" style="width:60%">
+          </div>
+        </div>
+        <div class="promo-text">
+          <h2>Exclusive Promotion at NOHARA'S HOUSE!</h2>
+          <p>Enjoy the quirky charm of NOHARA'S HOUSE while indulging in delicious treats, and get rewarded for your visit! Spend RM100 or more on a single receipt and receive a <strong>FREE Blindbox</strong> filled with surprises. It's the perfect way to make your experience even more memorable. Hurry, this offer is too good to miss—come on over and join the fun today at NOHARA'S HOUSE!</p>
+        </div>
+      </div> 
+      <br>
+      <script>
+        let slideIndex = 0;
+        showSlides(); // Start the automatic slideshow
+
+        // Function to automatically change slides
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }   
+    
+        // Function for manual navigation
+        function plusSlides(n) {
+          slideIndex += n;
+          showManualSlides(slideIndex);
+        }
+    
+        function currentSlide(n) {
+          slideIndex = n;
+          showManualSlides(slideIndex);
+        }
+    
+        // Helper function for manual slide navigation
+        function showManualSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+      }
+      </script>
+    </main>
+    <footer class="foot">
+      <nav>
+          <div class="navicon">
+            <ul>
+              <li><div class="zoom"><a href="https://web.whatsapp.com/"><img src="images/icon/whatsapp.png" alt="Whatsapp" style="width:28px; height:27px;"></a></div></li>
+              <li><div class="zoom"><a href="https://mail.google.com/mail/"><img src="images/icon/gmail.png" alt="Gmail" style="width:28px; height:28px;"></a></div></li> 
+              <li><div class="zoom"><a href="https://www.instagram.com/accounts/login/"><img src="images/icon/instagram.png" alt="Instagram" style="width:30px; height:28px;"></a></div></li> 
+              <li><div class="zoom"><a href="https://www.facebook.com/"><img src="images/icon/facebook.png" alt="Facebook" style="width:28px; height:26px;"></a></div></li>
+          </ul>
+          </div>
+      </nav>
+      <div class="copyright">
+        <small>&copy; 2024, Nohara's House</small>
+      </div>
+    </footer>
+  </body>
+</html> 

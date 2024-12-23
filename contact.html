@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nohara's Contact</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+    <body>
+        <header>
+            <a href="index.html" class="nohara"><img src="images/logo.png" alt="Logo" class="logo"></a>
+            <nav>
+              <ul>
+              <li><a href="index.html" >Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+              <li><a href="outlets.html">Outlets</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              </ul>
+          </nav>
+      </header>
+      <br><br><br>
+        <main>
+            <h1>CONTACT US</h1>
+            <div id="info">
+                <strong>Customer Service Hotline: </strong><a href="tel:+60123457890">+6012 345 7890</a><br>
+                <strong>Address: </strong><span style="color:rgba(16, 2, 2, 0.63);">Please visit our Outlet page to find our addresses based on your location.</span><br>
+                <strong>Email: </strong><a href="mailto:noharashouse@gmail.com">noharashouse@gmail.com</a>
+            </div>
+       
+            <div id="Container">
+              <form id="NoharasForm" action="index.html" method="get" onsubmit="msgFunction()">
+                <div id="form">
+                    <input type="text" placeholder="Name" id="Cname" name="Cname" required><br>
+                
+                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" spellcheck="false" autocapitalize="off"  required><br>
+        
+                    <input type="tel" placeholder="Phone Number" id="pNum" name="pNum" pattern="[0-9\-]*" required><br>
+        
+                    <textarea rows="10" cols="30" id="comment" name ="comment" placeholder="Comment" required></textarea> 
+        
+                    <input type="submit" id="sendbtn" value="Send">
+                </div>        
+              </form>
+            </div> 
+        </main>
+        <br><br><br>
+        <footer class="foot">
+            <nav>
+              <div class="navicon">
+                <ul>
+                  <li><div class="zoom"><a href="https://web.whatsapp.com/"><img src="images/icon/whatsapp.png" alt="Whatsapp" style="width:28px; height:27px;"></a></div></li>
+                  <li><div class="zoom"><a href="https://mail.google.com/mail/"><img src="images/icon/gmail.png" alt="Gmail" style="width:28px; height:28px;"></a></div></li> 
+                  <li><div class="zoom"><a href="https://www.instagram.com/accounts/login/"><img src="images/icon/instagram.png" alt="Instagram" style="width:30px; height:28px;"></a></div></li> 
+                  <li><div class="zoom"><a href="https://www.facebook.com/"><img src="images/icon/facebook.png" alt="Facebook" style="width:28px; height:26px;"></a></div></li>
+              </ul>
+              </div>
+            </nav>
+            <div class="copyright">
+              <small>&copy; 2024, Nohara's House</small>
+            </div>
+          </footer>
+    </body>
+</html>
